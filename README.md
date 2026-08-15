@@ -1,42 +1,35 @@
 # 🔐 USB Guardian
 
-USB Guardian is a Python-based desktop cybersecurity application that monitors USB device connections in real time and detects unauthorized devices.
+USB Guardian is a Python project I made to monitor USB devices connected to a Windows computer.
 
-The application maintains a list of trusted USB devices. When a USB device is connected, USB Guardian checks whether it is trusted and alerts the user if an unknown device is detected.
+The main idea is to check whether a connected USB device is trusted or not. If an unknown device is connected, the application gives an alert.
 
-## 🎯 Problem
+## What it does
 
-Unauthorized USB devices can introduce malware, enable unwanted hardware connections, or create security risks.
+- Detects USB devices
+- Checks devices with a trusted device list
+- Alerts when an unknown device is connected
+- Records USB activity
+- Has a simple GUI
 
-A user may not always notice when an unknown USB device is connected.
-
-## 💡 Solution
-
-USB Guardian continuously monitors USB device connections and compares newly connected devices with a trusted-device list.
-
-If the device is trusted, it is recognized normally.
-
-If the device is unknown, the application generates a security alert and records the activity.
-
-## ✨ Features
-
-- 🔌 Real-time USB device monitoring
-- 🛡️ Trusted device verification
-- ⚠️ Unknown device detection
-- 🔔 Security alerts
-- 📝 Activity logging
-- 🖥️ Desktop graphical user interface
-- 🔐 Trusted-device management
-
-## 🛠️ Technologies Used
+## Technologies I Used
 
 - Python
 - Tkinter
 - WMI
 - Windows
 
-## 📁 Project Structure
+## How it works
 
+1. The program monitors USB devices.
+2. When a USB device is connected, it detects it.
+3. It checks the device with the trusted device list.
+4. If it is trusted, it is recognized.
+5. If it is not trusted, an alert is shown.
+
+## Project Files
+
+```text
 USB-Guardian/
 │
 ├── README.md
@@ -46,54 +39,3 @@ USB-Guardian/
     ├── backend.py
     ├── frontend.py
     └── trusted_devices.txt
-
-## ⚙️ How It Works
-
-USB Device Connected
-        ↓
-Device Detected
-        ↓
-Check Trusted Device List
-        ↓
-Is Device Trusted?
-      ↙        ↘
-    YES         NO
-     ↓           ↓
- Recognize    Security Alert
-                  ↓
-             Record Activity
-
-## 🚀 How to Run
-
-1. Install Python on Windows.
-2. Open the project in VS Code.
-3. Install the required Python libraries.
-4. Run the application using the Python files.
-
-## 🔒 Security Purpose
-
-USB Guardian is a defensive cybersecurity project designed to monitor USB connections and identify devices that are not included in the trusted-device list.
-
-## 🔮 Future Improvements
-
-- Device fingerprinting
-- Automatic blocking of unauthorized USB devices
-- Email security notifications
-- Security dashboard
-- Detailed device history
-- Exportable security reports
-
-## 🎓 Project Purpose
-
-This project was developed as a cybersecurity learning project to understand:
-
-- Python programming
-- Desktop application development
-- USB device monitoring
-- Security monitoring
-- Trusted device management
-- Defensive cybersecurity
-
----
-
-Built with Python 🐍 for cybersecurity learning.
