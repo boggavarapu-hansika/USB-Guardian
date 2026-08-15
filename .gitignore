@@ -1,0 +1,5 @@
+activity_log.txt
+project.py/activity_log.txt
+project.py/__pycache__/
+*.pyc
+.venv/
